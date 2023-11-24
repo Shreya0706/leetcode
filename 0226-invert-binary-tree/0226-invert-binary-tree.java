@@ -18,11 +18,8 @@ class Solution {
         if(root == null){
             return root;
         }
-        // Call the function recursively for the left subtree...
         invertTree(root.left);
-        // Call the function recursively for the right subtree...
         invertTree(root.right);
-        // Swapping process...
         TreeNode curr = root.left;
         root.left = root.right;
         root.right = curr;
